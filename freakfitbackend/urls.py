@@ -7,3 +7,5 @@ urlpatterns = [
     path('api/', include('customers.urls')),
     path("", include("customers.urls")),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_ROOT, documents_root= settings.STATIC_ROOT)
